@@ -4,11 +4,11 @@ install:
 lint:
 	go fmt ./...
 
-test:
+test: install
 	go test -v
 
-build:
+build: install
 	go build
 
-run:
-	./class-cicd.exe
+run: install
+	./homework-server-depl.exe
