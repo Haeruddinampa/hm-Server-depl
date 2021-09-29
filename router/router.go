@@ -9,8 +9,11 @@ import (
 )
 
 func StartRoute() {
-	var address = "http://localhost:8000"
-	log.Println("Starting development server at", address)
+	var port string
+	if port == "" {
+		port = "8080"
+	}
+	log.Println("Starting development server at", port)
 	log.Println("Quit the server with CTRL-C.")
 
 	myRouter := mux.NewRouter().StrictSlash(true)
@@ -18,5 +21,5 @@ func StartRoute() {
 	myRouter.HandleFunc("/follower/{username}", controller.Follower).Methods("GET")
 	myRouter.HandleFunc("/{userid}/detail", controller.DataUser).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":8000", myRouter))
+	log.Fatal(http.ListenAndServe(":"+port, myRouter))
 }
