@@ -5,9 +5,10 @@ Ini adalah repository dari tugas materi Server Deployment.
 ## Link Heroku
 [Link tugas](https://homework-golang-server-depl.herokuapp.com/)
 
-## Endpoint
-[GET] /follower/<username>
-[GET] /<userid>/detail
+## Endpoint Docs
+[GET] /follower/:username
+
+[GET] /:userid/detail
 
 
 ## Data JSON
@@ -31,3 +32,6 @@ Ini adalah repository dari tugas materi Server Deployment.
     }
 }
 ```
+
+## Author
+[Fresly Lumban Sipahutar](https://github.com/freslylumban)
