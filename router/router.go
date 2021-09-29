@@ -4,12 +4,13 @@ import (
 	"homework-server-depl/controller"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 )
 
 func StartRoute() {
-	var port string
+	var port = os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
 	}
