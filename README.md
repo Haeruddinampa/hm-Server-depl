@@ -8,8 +8,14 @@ Ini adalah repository dari tugas materi Server Deployment.
 ## Endpoint Docs
 [GET] /follower/:username
 
+Ex. https://homework-golang-server-depl.herokuapp.com/follower/SammyShark
+
+---
 [GET] /:userid/detail
 
+Ex. https://homework-golang-server-depl.herokuapp.com/jamie/detail
+
+---
 
 ## Data JSON
 ```json

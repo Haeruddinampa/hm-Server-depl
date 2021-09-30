@@ -6,6 +6,7 @@ import (
 	"homework-server-depl/data"
 	"homework-server-depl/model"
 	"homework-server-depl/utils"
+	"io"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -14,6 +15,10 @@ import (
 var (
 	dataString = data.DataJson
 )
+
+func Home(w http.ResponseWriter, r *http.Request) {
+	io.WriteString(w, "Welcome to Fresly's API.")
+}
 
 func Follower(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")

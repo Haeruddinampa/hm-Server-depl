@@ -12,13 +12,14 @@ import (
 func StartRoute() {
 	var port = os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "8000"
 	}
 	log.Println("Starting development server at", port)
 	log.Println("Quit the server with CTRL-C.")
 
 	myRouter := mux.NewRouter().StrictSlash(true)
 
+	myRouter.HandleFunc("/", controller.Home).Methods("GET")
 	myRouter.HandleFunc("/follower/{username}", controller.Follower).Methods("GET")
 	myRouter.HandleFunc("/{userid}/detail", controller.DataUser).Methods("GET")
 
