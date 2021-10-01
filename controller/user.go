@@ -17,7 +17,7 @@ var (
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "Welcome to Fresly's API.")
+	io.WriteString(w, "Welcome to Haeruddim API.")
 }
 
 func Follower(w http.ResponseWriter, r *http.Request) {
